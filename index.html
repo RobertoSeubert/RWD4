@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .highlight {
+            color: red;
+        }
+
+        .section {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="section">
+        <h2>1. Mensagem</h2>
+        <p>Olá Mundo!!</p>
+    </div>
+
+    <div class="section">
+        <h2>2. Soma</h2>
+        <p>A soma de 5 e 3 é <span id="soma"></span>.</p>
+    </div>
+
+    <div class="section">
+        <h2>3. Alterar a propriedade de um elemento por ID</h2>
+        <div id="elementoId">Propriedade não alterada</div>
+    </div>
+
+    <div class="section">
+        <h2>4. Alterar a propriedade de um elemento por Nome</h2>
+        <div name="elementoName">Propriedade não alterada</div>
+    </div>
+
+    <div class="section">
+        <h2>5. Alterar a propriedade de um elemento por Classe</h2>
+        <div class="elementoClass">Propriedade não alterada</div>
+    </div>
+
+    <script>
+
+        var n1 = 5;
+        var n2 = 3;
+        var soma = n1 + n2;
+        document.getElementById('soma').innerText = soma;
+
+        document.getElementById('elementoId').innerHTML = 'Propriedade alterada por ID.';
+
+        var elementosPorNome = document.getElementsByName('elementoName');
+        for (var i = 0; i < elementosPorNome.length; i++) {
+            elementosPorNome[i].innerHTML = 'Propriedade alterada por Nome.';
+        }
+
+        var elementosPorClasse = document.getElementsByClassName('elementoClass');
+        for (var i = 0; i < elementosPorClasse.length; i++) {
+            elementosPorClasse[i].innerHTML = 'Propriedade alterada por Classe.';
+        }
+    </script>
+</body>
+</html>
